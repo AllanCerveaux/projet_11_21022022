@@ -6,7 +6,7 @@ export default function LodgingsToLodging({ lodgings }) {
   const navigateToLodgingById = (id) => () => navigate(`/lodging/${id}`)
   
   return (
-    <section className='logdings'>
+    <section className='lodgings'>
       {
         lodgings?.map(l => (
           <article className='card' style={{background: `url(${l.cover})`}} onClick={navigateToLodgingById(l.id)} key={`lodging-${l.id}`}>
