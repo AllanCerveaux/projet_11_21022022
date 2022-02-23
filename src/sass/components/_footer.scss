@@ -1,0 +1,25 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vh;
+  background-color: $black;
+  place-items: center;
+  .svg-container {
+    width: ms(5);
+  }
+  p {
+    color: $white;
+  }
+
+  @extend .p-1;
+
+  @include screen('desktop') {
+    .svg-container {
+      width: ms(6);
+    }
+    p {
+      font-size: ms(1);
+    }
+  }
+}

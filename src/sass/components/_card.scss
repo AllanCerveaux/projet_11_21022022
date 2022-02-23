@@ -43,6 +43,7 @@
 }
 
 .card-title {
+  @extend .px-0;
   position: relative;
   z-index: 100;
   font-size: ms(1);
