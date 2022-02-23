@@ -1,0 +1,107 @@
+.logding {
+  @extend .m-1;
+}
+
+.lodging-cover {
+  object-fit: cover;
+  border-radius: ms(0);
+  @include screen('desktop') {
+    width: 100%;
+    height: ms(8);
+  }
+}
+
+.lodging-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: ms(1);
+  @include screen('desktop') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.lodging-header--title,
+.lodging-header--location {
+  color: $primary-color;
+}
+
+.lodging-header--title {
+  font-weight: 500;
+  font-size: ms(2);
+  margin: 0;
+  @include screen('desktop') {
+    font-size: ms(3);
+  }
+}
+
+.lodging-header--location {
+  @include screen('desktop') {
+    font-size: ms(1);
+  }
+}
+
+.lodging-header--tags {
+  @extend .my-0;
+}
+
+.lodging-header--right {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  @include screen('desktop') {
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  img {
+    width: ms(3);
+    border-radius: 100%;
+  }
+  span {
+    margin-right: ms(0);
+    width: 55%;
+    text-align: right;
+    color: $primary-color;
+  }
+
+  @include screen('tablet') {
+    img {
+      width: ms(5);
+    }
+
+    span {
+      width: 50%;
+    }
+  }
+  @include screen('desktop') {
+    img {
+      width: ms(4);
+    }
+  }
+}
+
+.lodging-body {
+  width: 100%;
+  margin: ms(0) 0;
+  .accordion:last-child .accordion-body {
+    display: flex;
+    flex-direction: column;
+    gap: ms(-1);
+  }
+  @include screen('desktop') {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    .accordion {
+      margin: ms(1);
+    }
+  }
+}

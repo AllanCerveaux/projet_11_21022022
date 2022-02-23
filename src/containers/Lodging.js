@@ -36,7 +36,7 @@ export default function Lodging(){
         <div className='lodging-header'>
           <div className='lodging-header--left'>
             <h1 className='lodging-header--title'>{ lodging.title }</h1>
-            <span>{lodging.location}</span>
+            <span className='lodging-header--location'>{lodging.location}</span>
             <div className='lodging-header--tags'>
               { lodging?.tags.map(t => (<span key={IdGenerator()}>{t}</span>)) || null }
             </div>
@@ -46,13 +46,14 @@ export default function Lodging(){
               <span>{ lodging.host.name }</span>
               <img src={lodging.host.picture} alt='' />
             </div>
-
-            {
-              [...new Array(5)]
-                .map((elm, i) => {
-                  return (<Rating key={IdGenerator()} isActive={i+1 <= lodging.rating} />)
-                })
-            }
+            <div className='tags'>
+              {
+                [...new Array(5)]
+                  .map((elm, i) => {
+                    return (<Rating key={IdGenerator()} isActive={i+1 <= lodging.rating} />)
+                  })
+              }
+            </div>
           </div>
         </div>
         <div className='lodging-body'>

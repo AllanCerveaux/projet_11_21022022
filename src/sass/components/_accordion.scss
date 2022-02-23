@@ -1,4 +1,6 @@
 .accordion {
+  display: flex;
+  flex-direction: column;
   @extend .m-1;
   @include screen('desktop') {
     margin: ms(1) ms(6);
@@ -32,9 +34,11 @@
 }
 
 .accordion-body {
+  flex: 1;
   background-color: $secondary-color;
   color: $primary-color;
   font-size: ms(0);
+  border-radius: 0 0 ms(0) ms(0);
   @extend .p-1;
   @include screen('desktop') {
     font-size: ms(1);
