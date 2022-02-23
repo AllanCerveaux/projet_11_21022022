@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: space-between;
   @extend .m-1;
+  @include screen('desktop') {
+    margin: ms(3);
+  }
   @include screen('hrq') {
     margin: ms(3) ms(5);
   }

@@ -1,0 +1,47 @@
+.hero {
+  position: relative;
+  display: flex;
+  place-items: center;
+  height: ms(5);
+  background-image: url('~/public/images/homepage.jpg');
+  border-radius: ms(0);
+  background-size: cover;
+  @extend .m-1;
+  @extend .pl-0;
+  @include screen('desktop') {
+    height: ms(8);
+    margin: ms(3);
+  }
+  @include screen('hrq') {
+    margin: ms(3) ms(5);
+  }
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($black, 0.3);
+    z-index: 99;
+    border-radius: ms(0);
+  }
+}
+
+.hero-title {
+  position: relative;
+  z-index: 100;
+  width: 50%;
+  font-size: ms(1);
+  font-weight: 500;
+  color: $white;
+  @include screen('(min-width: 768px)') {
+    width: 100%;
+    text-align: center;
+    font-size: ms(2);
+  }
+  @include screen('desktop') {
+    font-size: ms(4);
+  }
+}
