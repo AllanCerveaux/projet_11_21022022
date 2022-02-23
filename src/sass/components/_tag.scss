@@ -1,0 +1,9 @@
+.tag {
+  text-align: center;
+  color: $white;
+  background-color: $primary-color;
+  border-radius: ms(-1);
+  font-size: ms(0);
+  padding: 0.5em 2em;
+  @extend .mr-1;
+}

@@ -38,7 +38,7 @@ export default function Lodging(){
             <h1 className='lodging-header--title'>{ lodging.title }</h1>
             <span className='lodging-header--location'>{lodging.location}</span>
             <div className='lodging-header--tags'>
-              { lodging?.tags.map(t => (<span key={IdGenerator()}>{t}</span>)) || null }
+              { lodging?.tags.map(t => (<span className='tag' key={IdGenerator()}>{t}</span>)) || null }
             </div>
           </div>
           <div className='lodging-header--right'>
