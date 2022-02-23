@@ -1,0 +1,30 @@
+.error {
+  color: $primary-color;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  @extend .my-1;
+  p {
+    font-size: ms(2);
+  }
+
+  a {
+    color: $primary-color;
+  }
+}
+
+.error-message {
+  align-self: center;
+  @extend .mb-5;
+}
+
+.error-code {
+  font-size: ms(6);
+  margin: ms(1);
+  @include screen('desktop') {
+    font-size: ms(8);
+  }
+}
