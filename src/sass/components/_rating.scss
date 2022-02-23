@@ -4,7 +4,13 @@
   &.active {
     color: $primary-color;
   }
+
   @include screen('desktop') {
     font-size: ms(3);
+  }
+
+  @include on-event() {
+    color: $primary-color;
+    cursor: pointer;
   }
 }
