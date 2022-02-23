@@ -23,7 +23,7 @@ export default function About(){
 
   return (
       <section className='about'>
-        <img className='hero-image' src='./images/about.png' alt='' />
+        <img className='about-image' src='./images/about.png' alt='' />
         <Accordion 
             handleClick={handleClick}
             id={aboutData.fiability.id}
