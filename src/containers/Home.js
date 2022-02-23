@@ -13,7 +13,7 @@ export default function Home(){
     return (
       <>
         <section className='hero'>
-          <img className='hero-image' src='' alt='' />
+          <img className='hero-image' src='./images/homepage.png' alt='' />
           <h1 className='hero-title'>Chez vous, partour et ailleur</h1>
         </section>
         <LodgingsToLodging lodgings={lodgings} />

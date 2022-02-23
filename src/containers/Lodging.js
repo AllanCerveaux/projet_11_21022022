@@ -64,9 +64,9 @@ export default function Lodging(){
           />
           <Accordion
             className="list-content"
-            id="Description"
+            id="Equipment"
             status={true}
-            title="Description"
+            title="Équipement"
             content={
               lodging.equipments
                 .map(e => (<span key={IdGenerator()} className='item'>{e}</span>))

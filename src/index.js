@@ -11,20 +11,22 @@ ReactDOM.render(
         to=""
         className="navbar-brand"
       >
-        Brand
+        <img src='./images/logo.svg' alt='' />
       </NavLink>
-      <NavLink
-        to=""
-        className="navbar-item"
-      >
-        Acceuil
-      </NavLink>
-      <NavLink
-        to="/About"
-        className="navbar-item"
-      >
-        À propos
-      </NavLink>
+      <div className='navbar-links'>
+        <NavLink
+          to=""
+          className={({isActive}) => `navbar-link mx-0 ${isActive ? 'navbar-link--active' : ''}`}
+        >
+          Acceuil
+        </NavLink>
+        <NavLink
+          to="/About"
+          className={({isActive}) => `navbar-link mx-0 ${isActive ? 'navbar-link--active' : ''}`}
+        >
+          À propos
+        </NavLink>
+      </div>
     </nav>
     
     <main>
