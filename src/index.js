@@ -1,17 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, NavLink } from 'react-router-dom';
+import MainRoutes from './routes';
+import './sass/App.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <nav className='navbar'>
+      <NavLink
+        to=""
+        className="navbar-brand"
+      >
+        Brand
+      </NavLink>
+      <NavLink
+        to=""
+        className="navbar-item"
+      >
+        Acceuil
+      </NavLink>
+      <NavLink
+        to="/About"
+        className="navbar-item"
+      >
+        À propos
+      </NavLink>
+    </nav>
+    
+    <main>
+      <MainRoutes />
+    </main>
+
+    <footer>
+      <img src="" alt="" />
+      <p>&copy; Kasa, All right reversed</p>
+    </footer>
+  </BrowserRouter>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
