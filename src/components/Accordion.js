@@ -8,7 +8,7 @@ export default function Accordion({status, content, title, handleClick, id}){
     return (
       <article className='accordion'>
         <div className='accordion-header' onClick={trigger}>
-          <h2>{title}</h2>
+          <h2 className='accordion-header--title'>{title}</h2>
           {arrow()}
         </div>
         <div className={`accordion-body ${[!status && "hidden" ]}`}>
