@@ -3,10 +3,16 @@
   align-items: center;
   justify-content: space-between;
   @extend .m-1;
+  @include screen('hrq') {
+    margin: ms(3) ms(5);
+  }
 }
 
 .navbar-brand {
   width: ms(5);
+  @include screen('hrq') {
+    width: auto;
+  }
 }
 
 .navbar-link {
