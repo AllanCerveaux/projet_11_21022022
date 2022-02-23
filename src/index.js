@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, NavLink } from 'react-router-dom';
+import Logo from './components/Logo';
 import MainRoutes from './routes';
 import './sass/App.scss';
-
 ReactDOM.render(
   <BrowserRouter>
     <nav className='navbar'>
@@ -11,7 +11,7 @@ ReactDOM.render(
         to=""
         className="navbar-brand"
       >
-        <img src='./images/logo.svg' alt='' />
+        <Logo />
       </NavLink>
       <div className='navbar-links'>
         <NavLink
@@ -34,7 +34,9 @@ ReactDOM.render(
     </main>
 
     <footer>
-      <img src="" alt="" />
+      <div className='svg-container'>
+        <Logo color='#FFF'/>
+      </div>
       <p>&copy; Kasa, All right reversed</p>
     </footer>
   </BrowserRouter>,
