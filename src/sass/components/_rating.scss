@@ -12,5 +12,8 @@
   @include on-event() {
     color: $primary-color;
     cursor: pointer;
+    &.active {
+      color: rgba($primary-color, 0.5);
+    }
   }
 }

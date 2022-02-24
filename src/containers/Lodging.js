@@ -15,6 +15,18 @@ export default function Lodging(){
     const { id } = useParams();
     const [onLoad, setOnload] = useState(true);
     const [lodging, setLodging] = useState(null);
+    const detailDefault = {
+      description: {status: true, id: 'description'},
+      equipments: {status: true, id: 'equipments'}
+    }
+    const [detailData, setDetailData] = useState(detailDefault);
+  
+    const handleClick = (id) => {
+      setDetailData({
+        ...detailDefault,
+        [id]: {...detailData[id], status: !detailData[id].status}
+      })
+    }
   
     useEffect(() => {
       let lodging = findLodging(id);
@@ -58,16 +70,17 @@ export default function Lodging(){
           </div>
         </div>
         <div className='lodging-body'>
-          <Accordion 
-            id="Description"
-            status={true}
+          <Accordion
+            handleClick={handleClick}
+            id={detailData.description.id}
+            status={detailData.description.status}
             title="Description"
             content={lodging.description}
           />
           <Accordion
-            className="list-content"
-            id="Equipment"
-            status={true}
+            handleClick={handleClick}
+            id={detailData.equipments.id}
+            status={detailData.equipments.status}
             title="Équipement"
             content={
               lodging.equipments
