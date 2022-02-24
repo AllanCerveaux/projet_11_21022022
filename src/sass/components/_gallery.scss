@@ -1,0 +1,48 @@
+.gallery {
+  height: ms(7);
+  border-radius: ms(0);
+  display: grid;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-row: repeat(2, 2fr);
+  grid-template-areas:
+    'previous . next'
+    '. pagination .';
+  @extend .p-2;
+  @include screen('desktop') {
+    height: ms(8);
+  }
+}
+
+.gallery-control--next {
+  grid-area: next;
+  align-self: end;
+  justify-self: end;
+}
+.gallery-control--previous {
+  grid-area: previous;
+  align-self: end;
+}
+.gallery-pagination {
+  grid-area: pagination;
+  justify-self: center;
+  align-self: end;
+}
+.gallery-control--previous,
+.gallery-control--next,
+.gallery-pagination {
+  color: $white;
+}
+.gallery-control--previous,
+.gallery-control--next {
+  font-size: ms(3);
+  font-weight: 700;
+  cursor: pointer;
+  @include screen('desktop') {
+    font-size: ms(5);
+  }
+  @include on-event() {
+    color: $primary-color;
+  }
+}

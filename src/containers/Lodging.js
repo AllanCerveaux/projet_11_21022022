@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Accordion from '../components/Accordion';
+import Gallery from '../components/Gallery';
 import Rating from '../components/Rating';
 import { IdGenerator } from '../lib/IdGenerator';
 import lodgings from '../lodgings.json';
@@ -32,7 +33,7 @@ export default function Lodging(){
 
     return (
       <section className="logding">
-        <img className="lodging-cover" src={lodging.cover} alt='' />
+        <Gallery lodging={ lodging }/>
         <div className='lodging-header'>
           <div className='lodging-header--left'>
             <h1 className='lodging-header--title'>{ lodging.title }</h1>
