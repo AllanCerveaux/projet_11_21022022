@@ -14,7 +14,7 @@
 .navbar-brand {
   width: ms(5);
   @include screen('hrq') {
-    width: auto;
+    width: ms(7);
   }
 }
 
