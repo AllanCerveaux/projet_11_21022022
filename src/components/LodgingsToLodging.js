@@ -9,9 +9,9 @@ export default function LodgingsToLodging({ lodgings }) {
     <section className='lodgings'>
       {
         lodgings?.map(l => (
-          <article className='card' style={{background: `url(${l.cover})`}} onClick={navigateToLodgingById(l.id)} key={`lodging-${l.id}`}>
+          <a className='card' href={`/lodging/${l.id}`} style={{backgroundImage: `url(${l.cover})`}} key={`lodging-${l.id}`}>
             <h2 className='card-title'>{l.title}</h2>
-          </article>
+          </a>
         )) || null
       }
     </section>
