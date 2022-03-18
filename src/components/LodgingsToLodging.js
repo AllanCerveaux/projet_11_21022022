@@ -1,10 +1,6 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
 
 export default function LodgingsToLodging({ lodgings }) {
-  const navigate = useNavigate()
-  const navigateToLodgingById = (id) => () => navigate(`/lodging/${id}`)
-  
   return (
     <section className='lodgings'>
       {
