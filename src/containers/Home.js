@@ -13,7 +13,7 @@ export default function Home(){
     return (
       <>
         <section className='hero'>
-          <h1 className='hero-title'>Chez vous, partour et ailleur</h1>
+          <h1 className='hero-title'>Chez vous, partout et ailleur</h1>
         </section>
         <LodgingsToLodging lodgings={lodgings} />
       </>
