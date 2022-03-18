@@ -1,8 +1,10 @@
 .card {
   position: relative;
-  height: ms(7);
+  height: 255px;
   border-radius: ms(0);
   background-size: cover;
+  background-position: center;
+  text-decoration: none;
   display: flex;
   @extend .m-1;
   @extend .pl-0;
@@ -33,7 +35,7 @@
   @include screen('desktop') {
     max-width: calc(100vw / 3);
     flex-basis: calc(100vw / 3);
-    height: ms(8);
+    height: 340px;
     margin: ms(3);
   }
   @include screen('hrq') {

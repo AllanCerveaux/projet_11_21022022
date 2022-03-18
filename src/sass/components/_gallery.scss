@@ -1,9 +1,10 @@
 .gallery {
-  height: ms(7);
+  height: 255px;
   border-radius: ms(0);
   display: grid;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-row: repeat(2, 2fr);
   grid-template-areas:
@@ -11,7 +12,7 @@
     '. pagination .';
   @extend .p-2;
   @include screen('desktop') {
-    height: ms(8);
+    height: 415px;
   }
 }
 

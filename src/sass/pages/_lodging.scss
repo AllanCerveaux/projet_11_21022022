@@ -44,6 +44,9 @@
 
 .lodging-header--tags {
   @extend .my-0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: ms(0);
 }
 
 .lodging-header--right {
