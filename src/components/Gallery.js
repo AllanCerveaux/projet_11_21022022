@@ -12,10 +12,18 @@ export default function Gallery({lodging}) {
   }
 
   return (
-    <div style={{backgroundImage: `url(${lodging.pictures[galleryIndex]})`}} className='gallery'>
-      <span className='gallery-pagination'>{galleryIndex + 1} / { lodgingLength }</span>
-      <span className='gallery-control--previous' onClick={previousPicture}>&lt;</span>
-      <span className='gallery-control--next'onClick={nextPicture}>&gt;</span>
+    <div style={{ backgroundImage: `url(${lodging.pictures[galleryIndex]})` }} className='gallery'>
+      {
+        lodgingLength > 1 ?
+          (
+            <>
+              <span className='gallery-pagination'>{galleryIndex + 1} / { lodgingLength }</span>
+              <span className='gallery-control--previous' onClick={previousPicture}>&lt;</span>
+              <span className='gallery-control--next'onClick={nextPicture}>&gt;</span>
+            </>
+          )
+        : <></>
+      }
     </div>
   )
 }
