@@ -16,8 +16,8 @@ export default function Lodging(){
     const [onLoad, setOnload] = useState(true);
     const [lodging, setLodging] = useState(null);
     const detailDefault = {
-      description: {status: true, id: 'description'},
-      equipments: {status: true, id: 'equipments'}
+      description: {status: false, id: 'description'},
+      equipments: {status: false, id: 'equipments'}
     }
     const [detailData, setDetailData] = useState(detailDefault);
   
